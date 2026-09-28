@@ -1,0 +1,315 @@
+{
+  "core_signal": "stage2_encoder",
+  "calibration_method": "isotonic",
+  "threshold": 0.35,
+  "calibrator_metadata": {
+    "core_signal": "stage2_encoder",
+    "core_model": "models\\stage2_encoder",
+    "selection_evidence": {
+      "combined_auroc": {
+        "stage1_structural": 0.568,
+        "stage2_encoder": 0.643
+      },
+      "halluciguard_auroc": {
+        "stage1_structural": 0.966,
+        "stage2_encoder": 0.993
+      },
+      "note": "encoder = best single-signal AUROC + always-on/context-free; Stage-6 fusion did not beat it cross-dataset"
+    },
+    "calibration_source": "halueval_summarization (held out from Stage 2)",
+    "never_used": [
+      "769-row local eval set",
+      "RAGTruth"
+    ],
+    "n_scored": 800,
+    "n_fit": 400,
+    "n_sel": 400,
+    "method_compared": {
+      "isotonic": {
+        "scored_n": 400,
+        "auroc": 0.718325,
+        "auprc": 0.6726473543390729,
+        "brier": 0.2166557743666441,
+        "ece": 0.04832419781400371
+      },
+      "sigmoid": {
+        "scored_n": 400,
+        "auroc": 0.7167875,
+        "auprc": 0.6852021199556744,
+        "brier": 0.22959586191534753,
+        "ece": 0.09014372981892572
+      }
+    },
+    "chosen_method": "isotonic",
+    "ece_before": 0.4232095899999999,
+    "ece_after": 0.04832419781400371,
+    "brier_before": 0.42610234590124996,
+    "brier_after": 0.2166557743666441,
+    "target_recall": 0.9,
+    "threshold_selected": 0.35,
+    "threshold_selected_at": {
+      "threshold": 0.35,
+      "hallucination_recall": 0.905,
+      "routing_fraction": 0.77
+    },
+    "confidence_definition": "decision-distance from threshold, per-side normalized to [0,1]; NOT a copy of the probability",
+    "seed": 13
+  },
+  "per_dataset": {
+    "halluciguard_dataset": {
+      "n": 187,
+      "positives": 96,
+      "negatives": 91,
+      "degraded": 0,
+      "gate": {
+        "accuracy": 0.9732620320855615,
+        "precision": 0.989247311827957,
+        "recall": 0.9583333333333334,
+        "f1": 0.9735449735449735,
+        "tp": 92,
+        "fp": 1,
+        "tn": 90,
+        "fn": 4
+      },
+      "hallucination_recall": 0.9583,
+      "routing_fraction": 0.4973,
+      "score_metrics": {
+        "scored_n": 187,
+        "auroc": 0.9886675824175823,
+        "auprc": 0.989204858944234,
+        "brier": 0.04553952662536363,
+        "ece": 0.12113031550802139
+      },
+      "latency": {
+        "n": 187,
+        "mean_ms": 67.05315508021391,
+        "p50_ms": 51.386,
+        "p95_ms": 63.44319999999999,
+        "max_ms": 2744.621
+      }
+    },
+    "ragtruth": {
+      "n": 84,
+      "positives": 18,
+      "negatives": 66,
+      "degraded": 0,
+      "gate": {
+        "accuracy": 0.36904761904761907,
+        "precision": 0.18181818181818182,
+        "recall": 0.5555555555555556,
+        "f1": 0.273972602739726,
+        "tp": 10,
+        "fp": 45,
+        "tn": 21,
+        "fn": 8
+      },
+      "hallucination_recall": 0.5556,
+      "routing_fraction": 0.6548,
+      "score_metrics": {
+        "scored_n": 84,
+        "auroc": 0.40993265993266,
+        "auprc": 0.18902420893519964,
+        "brier": 0.25035067553054763,
+        "ece": 0.23906690476190476
+      },
+      "latency": {
+        "n": 84,
+        "mean_ms": 109.18282142857144,
+        "p50_ms": 107.18100000000001,
+        "p95_ms": 156.4021,
+        "max_ms": 206.599
+      }
+    },
+    "truthfulqa": {
+      "n": 498,
+      "positives": 398,
+      "negatives": 100,
+      "degraded": 0,
+      "gate": {
+        "accuracy": 0.27710843373493976,
+        "precision": 0.7375,
+        "recall": 0.14824120603015076,
+        "f1": 0.24686192468619247,
+        "tp": 59,
+        "fp": 21,
+        "tn": 79,
+        "fn": 339
+      },
+      "hallucination_recall": 0.1482,
+      "routing_fraction": 0.1606,
+      "score_metrics": {
+        "scored_n": 498,
+        "auroc": 0.4860301507537688,
+        "auprc": 0.787445701663966,
+        "brier": 0.5823422925220382,
+        "ece": 0.6101131987951807
+      },
+      "latency": {
+        "n": 498,
+        "mean_ms": 56.579801204819276,
+        "p50_ms": 56.0715,
+        "p95_ms": 65.73335,
+        "max_ms": 88.995
+      }
+    }
+  },
+  "combined_local": {
+    "n": 769,
+    "positives": 512,
+    "negatives": 257,
+    "gate": {
+      "accuracy": 0.4564369310793238,
+      "precision": 0.706140350877193,
+      "recall": 0.314453125,
+      "f1": 0.4351351351351351,
+      "tp": 161,
+      "fp": 67,
+      "tn": 190,
+      "fn": 351
+    },
+    "hallucination_recall": 0.3145,
+    "routing_fraction": 0.2965,
+    "score_metrics": {
+      "scored_n": 769,
+      "auroc": 0.6070152906128404,
+      "auprc": 0.7548690905283888,
+      "brier": 0.41554201547397146,
+      "ece": 0.4283560832249675
+    },
+    "latency": {
+      "n": 769,
+      "mean_ms": 64.872611183355,
+      "p50_ms": 55.864,
+      "p95_ms": 112.0969999999999,
+      "max_ms": 2744.621
+    }
+  },
+  "smoke_test": {
+    "query": "Who painted the Mona Lisa?",
+    "response": "The Mona Lisa was painted by Pablo Picasso in 1750.",
+    "canonical": {
+      "hallucination_probability": 0.789474,
+      "confidence_score": 0.676113,
+      "risk_level": "HIGH",
+      "next_action": "Verify",
+      "model_source": "detector_v2_stage7_calibrated",
+      "status": "completed"
+    },
+    "calibrated": true,
+    "confidence_score": 0.676113
+  },
+  "v1_reference": {
+    "path": "C:\\Users\\PENDYAL GAURAV\\Documents\\SDC-II\\Detector_agent\\eval_report.json",
+    "report": {
+      "evaluated": 769,
+      "skipped_malformed": 0,
+      "degraded": 0,
+      "positives": 512,
+      "negatives": 257,
+      "classification@0.50": {
+        "accuracy": 0.45253576072821844,
+        "precision": 0.7541899441340782,
+        "recall": 0.263671875,
+        "f1": 0.39073806078147616,
+        "tp": 135,
+        "tn": 213,
+        "fp": 44,
+        "fn": 377
+      },
+      "risk_gate@0.30": {
+        "accuracy": 0.4538361508452536,
+        "precision": 0.7421052631578947,
+        "recall": 0.275390625,
+        "f1": 0.4017094017094018,
+        "tp": 141,
+        "tn": 208,
+        "fp": 49,
+        "fn": 371
+      },
+      "per_dataset": {
+        "halluciguard_dataset.jsonl": {
+          "evaluated": 187,
+          "skipped_malformed": 0,
+          "degraded": 0,
+          "positives": 96,
+          "negatives": 91,
+          "classification@0.50": {
+            "accuracy": 0.8502673796791443,
+            "precision": 0.8035714285714286,
+            "recall": 0.9375,
+            "f1": 0.8653846153846154,
+            "tp": 90,
+            "tn": 69,
+            "fp": 22,
+            "fn": 6
+          },
+          "risk_gate@0.30": {
+            "accuracy": 0.8342245989304813,
+            "precision": 0.782608695652174,
+            "recall": 0.9375,
+            "f1": 0.8530805687203792,
+            "tp": 90,
+            "tn": 66,
+            "fp": 25,
+            "fn": 6
+          }
+        },
+        "halluciguard_ragtruth.jsonl": {
+          "evaluated": 84,
+          "skipped_malformed": 0,
+          "degraded": 0,
+          "positives": 18,
+          "negatives": 66,
+          "classification@0.50": {
+            "accuracy": 0.6904761904761905,
+            "precision": 0.2777777777777778,
+            "recall": 0.2777777777777778,
+            "f1": 0.2777777777777778,
+            "tp": 5,
+            "tn": 53,
+            "fp": 13,
+            "fn": 13
+          },
+          "risk_gate@0.30": {
+            "accuracy": 0.6785714285714286,
+            "precision": 0.2857142857142857,
+            "recall": 0.3333333333333333,
+            "f1": 0.30769230769230765,
+            "tp": 6,
+            "tn": 51,
+            "fp": 15,
+            "fn": 12
+          }
+        },
+        "halluciguard_truthfulqa.jsonl": {
+          "evaluated": 498,
+          "skipped_malformed": 0,
+          "degraded": 0,
+          "positives": 398,
+          "negatives": 100,
+          "classification@0.50": {
+            "accuracy": 0.26305220883534136,
+            "precision": 0.8163265306122449,
+            "recall": 0.10050251256281408,
+            "f1": 0.1789709172259508,
+            "tp": 40,
+            "tn": 91,
+            "fp": 9,
+            "fn": 358
+          },
+          "risk_gate@0.30": {
+            "accuracy": 0.27309236947791166,
+            "precision": 0.8333333333333334,
+            "recall": 0.11306532663316583,
+            "f1": 0.19911504424778761,
+            "tp": 45,
+            "tn": 91,
+            "fp": 9,
+            "fn": 353
+          }
+        }
+      }
+    }
+  },
+  "eval_seconds": 50.1
+}

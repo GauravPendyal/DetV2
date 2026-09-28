@@ -1,0 +1,109 @@
+{
+  "subset": [
+    "encoder",
+    "entailment"
+  ],
+  "feature_names": [
+    "s2_mean",
+    "s2_max",
+    "s2_topk",
+    "s3_mean",
+    "s3_max",
+    "s3_topk",
+    "s3_avail"
+  ],
+  "impute": {
+    "s1_prob": 0.7511794793371966,
+    "s2_mean": 0.8761495253742972,
+    "s2_max": 0.8860650562500001,
+    "s2_topk": 0.8793571450520833,
+    "s3_mean": 0.5312130713016701,
+    "s3_max": 0.5425730296875,
+    "s3_topk": 0.533565918923611
+  },
+  "metadata": {
+    "stage": "stage6_fusion",
+    "config": "E",
+    "subset": [
+      "encoder",
+      "entailment"
+    ],
+    "feature_names": [
+      "s2_mean",
+      "s2_max",
+      "s2_topk",
+      "s3_mean",
+      "s3_max",
+      "s3_topk",
+      "s3_avail"
+    ],
+    "weights": {
+      "s2_mean": 2.1936308164733083,
+      "s2_max": -0.5632895496881019,
+      "s2_topk": -1.4753542735119751,
+      "s3_mean": 0.3985168045800598,
+      "s3_max": -0.053640985742936034,
+      "s3_topk": -0.33217024467281714,
+      "s3_avail": -0.0004363352131130007,
+      "__intercept__": -0.030217015135299723
+    },
+    "val_metrics": {
+      "classification@0.50": {
+        "accuracy": 0.5,
+        "precision": 0.4714285714285714,
+        "recall": 0.75,
+        "f1": 0.5789473684210525,
+        "tp": 165,
+        "fp": 185,
+        "tn": 75,
+        "fn": 55
+      },
+      "score_metrics": {
+        "scored_n": 480,
+        "auroc": 0.5614860139860139,
+        "auprc": 0.5203907185015354,
+        "brier": 0.24769944188401147,
+        "ece": 0.04805261580127479
+      }
+    },
+    "n_train_rows_after_aug": 3840,
+    "provenance": {
+      "meta_training_sources": {
+        "halueval_summarization": {
+          "n": 1200,
+          "note": "held out from Stages 1/2/3"
+        },
+        "external_grounded": {
+          "dataset": "tals/vitaminc",
+          "n": 1200,
+          "note": "never seen by any stage"
+        }
+      },
+      "never_trained_on": [
+        "RAGTruth (public test)",
+        "local Datasets/*.jsonl (769)"
+      ],
+      "n_pool": 2400,
+      "n_train": 1920,
+      "n_val": 480,
+      "entailment_available_in_pool": 2400,
+      "pool_pos_rate": 0.4575,
+      "agg_k": 3,
+      "seed": 13,
+      "impute": {
+        "s1_prob": 0.7511794793371966,
+        "s2_mean": 0.8761495253742972,
+        "s2_max": 0.8860650562500001,
+        "s2_topk": 0.8793571450520833,
+        "s3_mean": 0.5312130713016701,
+        "s3_max": 0.5425730296875,
+        "s3_topk": 0.533565918923611
+      },
+      "base_models": {
+        "stage1": "models\\stage1_logreg.joblib",
+        "stage2": "models\\stage2_encoder",
+        "stage3": "models\\stage3_entailment"
+      }
+    }
+  }
+}

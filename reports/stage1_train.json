@@ -1,0 +1,115 @@
+{
+  "trained_on": "HaluEval",
+  "train_groups": [
+    "dialogue",
+    "qa"
+  ],
+  "holdout_group": "summarization",
+  "n_train": 5100,
+  "n_val": 900,
+  "n_holdout": 3000,
+  "max_pairs_per_config": 1500,
+  "seed": 13,
+  "metrics": {
+    "train": {
+      "classification@0.50": {
+        "accuracy": 0.702156862745098,
+        "precision": 0.718892104175279,
+        "recall": 0.6745539177657098,
+        "f1": 0.6960176105663397,
+        "tp": 1739,
+        "fp": 680,
+        "tn": 1842,
+        "fn": 839
+      },
+      "score_metrics": {
+        "scored_n": 5100,
+        "auroc": 0.7939764671357532,
+        "auprc": 0.760155679878225,
+        "brier": 0.1891610736943833,
+        "ece": 0.0961600631465839
+      }
+    },
+    "val": {
+      "classification@0.50": {
+        "accuracy": 0.6966666666666667,
+        "precision": 0.6886075949367089,
+        "recall": 0.6445497630331753,
+        "f1": 0.6658506731946143,
+        "tp": 272,
+        "fp": 123,
+        "tn": 355,
+        "fn": 150
+      },
+      "score_metrics": {
+        "scored_n": 900,
+        "auroc": 0.7889210573281246,
+        "auprc": 0.7256729570527606,
+        "brier": 0.19234409825962703,
+        "ece": 0.09894296361089526
+      }
+    },
+    "holdout_group:summarization": {
+      "classification@0.50": {
+        "accuracy": 0.5006666666666667,
+        "precision": 0.5003335557038026,
+        "recall": 1.0,
+        "f1": 0.6669630947087595,
+        "tp": 1500,
+        "fp": 1498,
+        "tn": 2,
+        "fn": 0
+      },
+      "score_metrics": {
+        "scored_n": 3000,
+        "auroc": 0.8306513333333333,
+        "auprc": 0.8145919592413962,
+        "brier": 0.4435080768484738,
+        "ece": 0.4632270469010697
+      }
+    }
+  },
+  "top_weights": [
+    [
+      "total_tokens",
+      1.5553291433799938
+    ],
+    [
+      "d_absolute_density_mean",
+      -0.9578911346518493
+    ],
+    [
+      "n_claims",
+      -0.8296402492560364
+    ],
+    [
+      "num_count_per_tok",
+      -0.6973009147605277
+    ],
+    [
+      "d_specificity_mean",
+      0.6400777954191889
+    ],
+    [
+      "d_false_premise_density_mean",
+      -0.5797891215870528
+    ],
+    [
+      "d_absolute_density_max",
+      0.5581290479278517
+    ],
+    [
+      "d_false_premise_density_max",
+      0.4974278994603578
+    ],
+    [
+      "date_count_per_tok",
+      -0.4738539003511891
+    ],
+    [
+      "hedge_count_per_tok",
+      -0.4735592645781248
+    ]
+  ],
+  "train_seconds": 8.33
+}

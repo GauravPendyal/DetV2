@@ -1,0 +1,19 @@
+# Detector V2 — dependency sets by stage.
+# Stage 0/1 (heuristics + logistic-regression fusion + evaluation metrics):
+pydantic>=2.7,<3
+numpy>=1.26
+scikit-learn>=1.3
+pytest>=8
+
+# Stage 2/3/4 (DeBERTa-v3 encoder, MiniCheck-style entailment, uncertainty) —
+# install only when running those stages. torch is the CPU wheel here:
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1
+#   pip install transformers==4.46.3 sentencepiece>=0.2.0 protobuf>=3.20
+#   datasets>=2.19  (already installed for public-train loading)
+# Notes: DeBERTa-v3 uses a SentencePiece tokenizer, so BOTH sentencepiece and
+# protobuf are required for the (slow->fast) tokenizer conversion to succeed.
+#   torch==2.5.1            # CPU wheel (see index-url above)
+#   transformers==4.46.3
+#   sentencepiece>=0.2.0
+#   protobuf>=3.20
+#   datasets>=2.19

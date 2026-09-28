@@ -1,0 +1,389 @@
+{
+  "ragtruth_grounded": {
+    "n": 600,
+    "positives": 210,
+    "task_types": [
+      "Summary",
+      "QA",
+      "Data2txt"
+    ],
+    "stage2_encoder": {
+      "n": 600,
+      "positives": 210,
+      "negatives": 390,
+      "degraded": 0,
+      "gate": {
+        "accuracy": 0.35,
+        "precision": 0.35,
+        "recall": 1.0,
+        "f1": 0.5185185185185185,
+        "tp": 210,
+        "fp": 390,
+        "tn": 0,
+        "fn": 0
+      },
+      "threshold@0.50": {
+        "accuracy": 0.3516666666666667,
+        "precision": 0.35058430717863104,
+        "recall": 1.0,
+        "f1": 0.519159456118665,
+        "tp": 210,
+        "fp": 389,
+        "tn": 1,
+        "fn": 0
+      },
+      "score_metrics": {
+        "scored_n": 600,
+        "auroc": 0.3168131868131868,
+        "auprc": 0.2604883723494417,
+        "brier": 0.5438926272543867,
+        "ece": 0.5556311333333334
+      },
+      "latency": {
+        "n": 600,
+        "mean_ms": 152.126915,
+        "p50_ms": 136.188,
+        "p95_ms": 265.22605,
+        "max_ms": 3300.227
+      },
+      "routing_budgets": {
+        "<= 30%": {
+          "budget": 0.3,
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        "<= 50%": {
+          "budget": 0.5,
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        "<= 70%": {
+          "budget": 0.7,
+          "threshold": 0.9,
+          "frac_routed": 0.6433333333333333,
+          "hallucination_recall": 0.4142857142857143
+        }
+      },
+      "routing_curve": [
+        {
+          "threshold": 0.0,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.05,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.1,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.15,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.2,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.25,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.3,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.35,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.4,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.45,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.5,
+          "frac_routed": 0.9983333333333333,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.55,
+          "frac_routed": 0.9933333333333333,
+          "hallucination_recall": 0.9952380952380953
+        },
+        {
+          "threshold": 0.6,
+          "frac_routed": 0.9933333333333333,
+          "hallucination_recall": 0.9952380952380953
+        },
+        {
+          "threshold": 0.65,
+          "frac_routed": 0.985,
+          "hallucination_recall": 0.9952380952380953
+        },
+        {
+          "threshold": 0.7,
+          "frac_routed": 0.9816666666666667,
+          "hallucination_recall": 0.9952380952380953
+        },
+        {
+          "threshold": 0.75,
+          "frac_routed": 0.9816666666666667,
+          "hallucination_recall": 0.9952380952380953
+        },
+        {
+          "threshold": 0.8,
+          "frac_routed": 0.975,
+          "hallucination_recall": 0.9857142857142858
+        },
+        {
+          "threshold": 0.85,
+          "frac_routed": 0.9716666666666667,
+          "hallucination_recall": 0.9809523809523809
+        },
+        {
+          "threshold": 0.9,
+          "frac_routed": 0.6433333333333333,
+          "hallucination_recall": 0.4142857142857143
+        },
+        {
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        {
+          "threshold": 1.0,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        }
+      ]
+    },
+    "stage3_entailment": {
+      "n": 600,
+      "positives": 210,
+      "negatives": 390,
+      "degraded": 0,
+      "gate": {
+        "accuracy": 0.35,
+        "precision": 0.35,
+        "recall": 1.0,
+        "f1": 0.5185185185185185,
+        "tp": 210,
+        "fp": 390,
+        "tn": 0,
+        "fn": 0
+      },
+      "threshold@0.50": {
+        "accuracy": 0.37666666666666665,
+        "precision": 0.3101851851851852,
+        "recall": 0.638095238095238,
+        "f1": 0.41744548286604366,
+        "tp": 134,
+        "fp": 298,
+        "tn": 92,
+        "fn": 76
+      },
+      "score_metrics": {
+        "scored_n": 600,
+        "auroc": 0.3307936507936508,
+        "auprc": 0.26431440209522633,
+        "brier": 0.330945531418535,
+        "ece": 0.2458273116666667
+      },
+      "latency": {
+        "n": 600,
+        "mean_ms": 1221.7791816666665,
+        "p50_ms": 955.1469999999999,
+        "p95_ms": 3199.665149999999,
+        "max_ms": 7035.139
+      },
+      "routing_budgets": {
+        "<= 30%": {
+          "budget": 0.3,
+          "threshold": 0.65,
+          "frac_routed": 0.2866666666666667,
+          "hallucination_recall": 0.13333333333333333
+        },
+        "<= 50%": {
+          "budget": 0.5,
+          "threshold": 0.6,
+          "frac_routed": 0.395,
+          "hallucination_recall": 0.21428571428571427
+        },
+        "<= 70%": {
+          "budget": 0.7,
+          "threshold": 0.55,
+          "frac_routed": 0.5283333333333333,
+          "hallucination_recall": 0.34285714285714286
+        }
+      },
+      "routing_curve": [
+        {
+          "threshold": 0.0,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.05,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.1,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.15,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.2,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.25,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.3,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.35,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.4,
+          "frac_routed": 0.9916666666666667,
+          "hallucination_recall": 0.9809523809523809
+        },
+        {
+          "threshold": 0.45,
+          "frac_routed": 0.9266666666666666,
+          "hallucination_recall": 0.8714285714285714
+        },
+        {
+          "threshold": 0.5,
+          "frac_routed": 0.72,
+          "hallucination_recall": 0.638095238095238
+        },
+        {
+          "threshold": 0.55,
+          "frac_routed": 0.5283333333333333,
+          "hallucination_recall": 0.34285714285714286
+        },
+        {
+          "threshold": 0.6,
+          "frac_routed": 0.395,
+          "hallucination_recall": 0.21428571428571427
+        },
+        {
+          "threshold": 0.65,
+          "frac_routed": 0.2866666666666667,
+          "hallucination_recall": 0.13333333333333333
+        },
+        {
+          "threshold": 0.7,
+          "frac_routed": 0.22166666666666668,
+          "hallucination_recall": 0.09523809523809523
+        },
+        {
+          "threshold": 0.75,
+          "frac_routed": 0.14333333333333334,
+          "hallucination_recall": 0.06190476190476191
+        },
+        {
+          "threshold": 0.8,
+          "frac_routed": 0.075,
+          "hallucination_recall": 0.01904761904761905
+        },
+        {
+          "threshold": 0.85,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        {
+          "threshold": 1.0,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        }
+      ]
+    }
+  },
+  "stage3_on_local_context_free": {
+    "halluciguard_dataset": {
+      "n": 187,
+      "degraded": 187,
+      "gate": {
+        "accuracy": 0.5133689839572193,
+        "precision": 0.5133689839572193,
+        "recall": 1.0,
+        "f1": 0.6784452296819788,
+        "tp": 96,
+        "fp": 91,
+        "tn": 0,
+        "fn": 0
+      }
+    },
+    "ragtruth": {
+      "n": 84,
+      "degraded": 84,
+      "gate": {
+        "accuracy": 0.21428571428571427,
+        "precision": 0.21428571428571427,
+        "recall": 1.0,
+        "f1": 0.35294117647058826,
+        "tp": 18,
+        "fp": 66,
+        "tn": 0,
+        "fn": 0
+      }
+    },
+    "truthfulqa": {
+      "n": 498,
+      "degraded": 498,
+      "gate": {
+        "accuracy": 0.7991967871485943,
+        "precision": 0.7991967871485943,
+        "recall": 1.0,
+        "f1": 0.8883928571428571,
+        "tp": 398,
+        "fp": 100,
+        "tn": 0,
+        "fn": 0
+      }
+    }
+  }
+}

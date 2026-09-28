@@ -1,0 +1,95 @@
+{
+  "subset": [
+    "encoder"
+  ],
+  "feature_names": [
+    "s2_mean",
+    "s2_max",
+    "s2_topk"
+  ],
+  "impute": {
+    "s1_prob": 0.7511794793371966,
+    "s2_mean": 0.8761495253742972,
+    "s2_max": 0.8860650562500001,
+    "s2_topk": 0.8793571450520833,
+    "s3_mean": 0.5312130713016701,
+    "s3_max": 0.5425730296875,
+    "s3_topk": 0.533565918923611
+  },
+  "metadata": {
+    "stage": "stage6_fusion",
+    "config": "B",
+    "subset": [
+      "encoder"
+    ],
+    "feature_names": [
+      "s2_mean",
+      "s2_max",
+      "s2_topk"
+    ],
+    "weights": {
+      "s2_mean": 1.7945791312507882,
+      "s2_max": -0.5808303964279747,
+      "s2_topk": -1.0636024333725997,
+      "__intercept__": -0.023296943801081042
+    },
+    "val_metrics": {
+      "classification@0.50": {
+        "accuracy": 0.4979166666666667,
+        "precision": 0.47244094488188976,
+        "recall": 0.8181818181818182,
+        "f1": 0.5990016638935108,
+        "tp": 180,
+        "fp": 201,
+        "tn": 59,
+        "fn": 40
+      },
+      "score_metrics": {
+        "scored_n": 480,
+        "auroc": 0.6023076923076923,
+        "auprc": 0.5779346171989636,
+        "brier": 0.24762280356135877,
+        "ece": 0.04727897876755612
+      }
+    },
+    "n_train_rows_after_aug": 1920,
+    "provenance": {
+      "meta_training_sources": {
+        "halueval_summarization": {
+          "n": 1200,
+          "note": "held out from Stages 1/2/3"
+        },
+        "external_grounded": {
+          "dataset": "tals/vitaminc",
+          "n": 1200,
+          "note": "never seen by any stage"
+        }
+      },
+      "never_trained_on": [
+        "RAGTruth (public test)",
+        "local Datasets/*.jsonl (769)"
+      ],
+      "n_pool": 2400,
+      "n_train": 1920,
+      "n_val": 480,
+      "entailment_available_in_pool": 2400,
+      "pool_pos_rate": 0.4575,
+      "agg_k": 3,
+      "seed": 13,
+      "impute": {
+        "s1_prob": 0.7511794793371966,
+        "s2_mean": 0.8761495253742972,
+        "s2_max": 0.8860650562500001,
+        "s2_topk": 0.8793571450520833,
+        "s3_mean": 0.5312130713016701,
+        "s3_max": 0.5425730296875,
+        "s3_topk": 0.533565918923611
+      },
+      "base_models": {
+        "stage1": "models\\stage1_logreg.joblib",
+        "stage2": "models\\stage2_encoder",
+        "stage3": "models\\stage3_entailment"
+      }
+    }
+  }
+}

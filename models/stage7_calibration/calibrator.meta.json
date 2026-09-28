@@ -1,0 +1,57 @@
+{
+  "method": "isotonic",
+  "threshold": 0.35,
+  "metadata": {
+    "core_signal": "stage2_encoder",
+    "core_model": "models\\stage2_encoder",
+    "selection_evidence": {
+      "combined_auroc": {
+        "stage1_structural": 0.568,
+        "stage2_encoder": 0.643
+      },
+      "halluciguard_auroc": {
+        "stage1_structural": 0.966,
+        "stage2_encoder": 0.993
+      },
+      "note": "encoder = best single-signal AUROC + always-on/context-free; Stage-6 fusion did not beat it cross-dataset"
+    },
+    "calibration_source": "halueval_summarization (held out from Stage 2)",
+    "never_used": [
+      "769-row local eval set",
+      "RAGTruth"
+    ],
+    "n_scored": 800,
+    "n_fit": 400,
+    "n_sel": 400,
+    "method_compared": {
+      "isotonic": {
+        "scored_n": 400,
+        "auroc": 0.718325,
+        "auprc": 0.6726473543390729,
+        "brier": 0.2166557743666441,
+        "ece": 0.04832419781400371
+      },
+      "sigmoid": {
+        "scored_n": 400,
+        "auroc": 0.7167875,
+        "auprc": 0.6852021199556744,
+        "brier": 0.22959586191534753,
+        "ece": 0.09014372981892572
+      }
+    },
+    "chosen_method": "isotonic",
+    "ece_before": 0.4232095899999999,
+    "ece_after": 0.04832419781400371,
+    "brier_before": 0.42610234590124996,
+    "brier_after": 0.2166557743666441,
+    "target_recall": 0.9,
+    "threshold_selected": 0.35,
+    "threshold_selected_at": {
+      "threshold": 0.35,
+      "hallucination_recall": 0.905,
+      "routing_fraction": 0.77
+    },
+    "confidence_definition": "decision-distance from threshold, per-side normalized to [0,1]; NOT a copy of the probability",
+    "seed": 13
+  }
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "halluciguard-detector-v2"
+version = "0.1.0"
+description = "HalluciGuard Detector V2 — a calibrated, claim-aware, multi-signal hallucination triage gate."
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.7,<3",
+]
+
+[project.optional-dependencies]
+# Stage 0/1 + evaluation
+ml = ["numpy>=1.26", "scikit-learn>=1.3"]
+# Stage 2/3/4 (neural signals) — installed only when those stages are exercised
+neural = ["torch>=2.2", "transformers>=4.40", "datasets>=2.19"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["detector_v2*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

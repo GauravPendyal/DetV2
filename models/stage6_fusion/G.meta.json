@@ -1,0 +1,114 @@
+{
+  "subset": [
+    "structural",
+    "encoder",
+    "entailment"
+  ],
+  "feature_names": [
+    "s1_prob",
+    "s2_mean",
+    "s2_max",
+    "s2_topk",
+    "s3_mean",
+    "s3_max",
+    "s3_topk",
+    "s3_avail"
+  ],
+  "impute": {
+    "s1_prob": 0.7511794793371966,
+    "s2_mean": 0.8761495253742972,
+    "s2_max": 0.8860650562500001,
+    "s2_topk": 0.8793571450520833,
+    "s3_mean": 0.5312130713016701,
+    "s3_max": 0.5425730296875,
+    "s3_topk": 0.533565918923611
+  },
+  "metadata": {
+    "stage": "stage6_fusion",
+    "config": "G",
+    "subset": [
+      "structural",
+      "encoder",
+      "entailment"
+    ],
+    "feature_names": [
+      "s1_prob",
+      "s2_mean",
+      "s2_max",
+      "s2_topk",
+      "s3_mean",
+      "s3_max",
+      "s3_topk",
+      "s3_avail"
+    ],
+    "weights": {
+      "s1_prob": 0.3033703448579299,
+      "s2_mean": 2.6281568113577345,
+      "s2_max": -0.7640026766993164,
+      "s2_topk": -1.813527871424159,
+      "s3_mean": 0.8722027974208963,
+      "s3_max": -0.41924934339365283,
+      "s3_topk": -0.43598613630148714,
+      "s3_avail": -0.0023056518373485127,
+      "__intercept__": -0.041601103811060754
+    },
+    "val_metrics": {
+      "classification@0.50": {
+        "accuracy": 0.5458333333333333,
+        "precision": 0.5037878787878788,
+        "recall": 0.6045454545454545,
+        "f1": 0.5495867768595041,
+        "tp": 133,
+        "fp": 131,
+        "tn": 129,
+        "fn": 87
+      },
+      "score_metrics": {
+        "scored_n": 480,
+        "auroc": 0.6028321678321679,
+        "auprc": 0.6126938584501646,
+        "brier": 0.2438583412571673,
+        "ece": 0.05661507330228971
+      }
+    },
+    "n_train_rows_after_aug": 3840,
+    "provenance": {
+      "meta_training_sources": {
+        "halueval_summarization": {
+          "n": 1200,
+          "note": "held out from Stages 1/2/3"
+        },
+        "external_grounded": {
+          "dataset": "tals/vitaminc",
+          "n": 1200,
+          "note": "never seen by any stage"
+        }
+      },
+      "never_trained_on": [
+        "RAGTruth (public test)",
+        "local Datasets/*.jsonl (769)"
+      ],
+      "n_pool": 2400,
+      "n_train": 1920,
+      "n_val": 480,
+      "entailment_available_in_pool": 2400,
+      "pool_pos_rate": 0.4575,
+      "agg_k": 3,
+      "seed": 13,
+      "impute": {
+        "s1_prob": 0.7511794793371966,
+        "s2_mean": 0.8761495253742972,
+        "s2_max": 0.8860650562500001,
+        "s2_topk": 0.8793571450520833,
+        "s3_mean": 0.5312130713016701,
+        "s3_max": 0.5425730296875,
+        "s3_topk": 0.533565918923611
+      },
+      "base_models": {
+        "stage1": "models\\stage1_logreg.joblib",
+        "stage2": "models\\stage2_encoder",
+        "stage3": "models\\stage3_entailment"
+      }
+    }
+  }
+}

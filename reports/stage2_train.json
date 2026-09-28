@@ -1,0 +1,105 @@
+{
+  "trained_on": "HaluEval",
+  "backbone": "microsoft/deberta-v3-xsmall",
+  "train_groups": [
+    "dialogue",
+    "qa"
+  ],
+  "holdout_group": "summarization",
+  "weak_labels": "claim inherits response label",
+  "n_train_claims": 3432,
+  "n_val_claims": 602,
+  "n_holdout_claims": 4844,
+  "max_pairs_per_config": 700,
+  "epochs": 2,
+  "batch_size": 16,
+  "lr": 2e-05,
+  "max_len": 128,
+  "aggregation": "topk_mean",
+  "aggregation_k": 3,
+  "seed": 13,
+  "metrics": {
+    "val": {
+      "claim": {
+        "classification@0.50": {
+          "accuracy": 0.7641196013289037,
+          "precision": 0.7512820512820513,
+          "recall": 0.8668639053254438,
+          "f1": 0.8049450549450549,
+          "tp": 293,
+          "fp": 97,
+          "tn": 167,
+          "fn": 45
+        },
+        "score_metrics": {
+          "scored_n": 602,
+          "auroc": 0.8693013717052179,
+          "auprc": 0.8990664436065681,
+          "brier": 0.153075674723744,
+          "ece": 0.08545476330004857
+        }
+      },
+      "response": {
+        "classification@0.50": {
+          "accuracy": 0.8238095238095238,
+          "precision": 0.7597173144876325,
+          "recall": 0.9728506787330317,
+          "f1": 0.8531746031746033,
+          "tp": 215,
+          "fp": 68,
+          "tn": 131,
+          "fn": 6
+        },
+        "score_metrics": {
+          "scored_n": 420,
+          "auroc": 0.9328315787080197,
+          "auprc": 0.9409594997308386,
+          "brier": 0.11769687850880953,
+          "ece": 0.10456316227182035
+        }
+      }
+    },
+    "holdout_group:summarization": {
+      "claim": {
+        "classification@0.50": {
+          "accuracy": 0.4832782824112304,
+          "precision": 0.47629039026437264,
+          "recall": 0.9969257795344751,
+          "f1": 0.6446116711628568,
+          "tp": 2270,
+          "fp": 2496,
+          "tn": 71,
+          "fn": 7
+        },
+        "score_metrics": {
+          "scored_n": 4844,
+          "auroc": 0.6694189057800786,
+          "auprc": 0.5949887484009029,
+          "brier": 0.44171430518709154,
+          "ece": 0.4422756537501288
+        }
+      },
+      "response": {
+        "classification@0.50": {
+          "accuracy": 0.5021428571428571,
+          "precision": 0.5010737294201861,
+          "recall": 1.0,
+          "f1": 0.6676204101096805,
+          "tp": 700,
+          "fp": 697,
+          "tn": 3,
+          "fn": 0
+        },
+        "score_metrics": {
+          "scored_n": 1400,
+          "auroc": 0.7189857142857143,
+          "auprc": 0.6929814173497819,
+          "brier": 0.4172343874328556,
+          "ece": 0.4182407526547709
+        }
+      }
+    }
+  },
+  "train_seconds": 891.3,
+  "model_name": "microsoft/deberta-v3-xsmall"
+}

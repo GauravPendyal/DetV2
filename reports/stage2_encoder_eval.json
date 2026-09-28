@@ -1,0 +1,680 @@
+{
+  "per_dataset": {
+    "halluciguard_dataset": {
+      "n": 187,
+      "positives": 96,
+      "negatives": 91,
+      "degraded": 0,
+      "gate": {
+        "accuracy": 0.9679144385026738,
+        "precision": 0.9591836734693877,
+        "recall": 0.9791666666666666,
+        "f1": 0.9690721649484536,
+        "tp": 94,
+        "fp": 4,
+        "tn": 87,
+        "fn": 2
+      },
+      "threshold@0.50": {
+        "accuracy": 0.9732620320855615,
+        "precision": 0.9690721649484536,
+        "recall": 0.9791666666666666,
+        "f1": 0.9740932642487047,
+        "tp": 94,
+        "fp": 3,
+        "tn": 88,
+        "fn": 2
+      },
+      "score_metrics": {
+        "scored_n": 187,
+        "auroc": 0.9926739926739926,
+        "auprc": 0.9946071827405626,
+        "brier": 0.02753751720036364,
+        "ece": 0.034497486631015976
+      },
+      "latency": {
+        "n": 187,
+        "mean_ms": 47.478582887700526,
+        "p50_ms": 47.266,
+        "p95_ms": 58.459199999999996,
+        "max_ms": 74.253
+      },
+      "routing_budgets": {
+        "<= 30%": {
+          "budget": 0.3,
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        "<= 50%": {
+          "budget": 0.5,
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        "<= 70%": {
+          "budget": 0.7,
+          "threshold": 0.1,
+          "frac_routed": 0.5561497326203209,
+          "hallucination_recall": 0.9791666666666666
+        }
+      },
+      "routing_curve": [
+        {
+          "threshold": 0.0,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.05,
+          "frac_routed": 0.839572192513369,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.1,
+          "frac_routed": 0.5561497326203209,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.15,
+          "frac_routed": 0.5294117647058824,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.2,
+          "frac_routed": 0.5240641711229946,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.25,
+          "frac_routed": 0.5240641711229946,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.3,
+          "frac_routed": 0.5240641711229946,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.35,
+          "frac_routed": 0.5240641711229946,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.4,
+          "frac_routed": 0.5240641711229946,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.45,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.5,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.55,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.6,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.65,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.7,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.75,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.8,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.85,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.9,
+          "frac_routed": 0.5187165775401069,
+          "hallucination_recall": 0.9791666666666666
+        },
+        {
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        {
+          "threshold": 1.0,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        }
+      ]
+    },
+    "ragtruth": {
+      "n": 84,
+      "positives": 18,
+      "negatives": 66,
+      "degraded": 0,
+      "gate": {
+        "accuracy": 0.21428571428571427,
+        "precision": 0.21428571428571427,
+        "recall": 1.0,
+        "f1": 0.35294117647058826,
+        "tp": 18,
+        "fp": 66,
+        "tn": 0,
+        "fn": 0
+      },
+      "threshold@0.50": {
+        "accuracy": 0.21428571428571427,
+        "precision": 0.21428571428571427,
+        "recall": 1.0,
+        "f1": 0.35294117647058826,
+        "tp": 18,
+        "fp": 66,
+        "tn": 0,
+        "fn": 0
+      },
+      "score_metrics": {
+        "scored_n": 84,
+        "auroc": 0.41077441077441074,
+        "auprc": 0.19537588025600316,
+        "brier": 0.6719177664338095,
+        "ece": 0.7091939999999999
+      },
+      "latency": {
+        "n": 84,
+        "mean_ms": 101.10766666666669,
+        "p50_ms": 102.79050000000001,
+        "p95_ms": 140.1793,
+        "max_ms": 216.416
+      },
+      "routing_budgets": {
+        "<= 30%": {
+          "budget": 0.3,
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        "<= 50%": {
+          "budget": 0.5,
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        "<= 70%": {
+          "budget": 0.7,
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        }
+      },
+      "routing_curve": [
+        {
+          "threshold": 0.0,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.05,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.1,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.15,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.2,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.25,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.3,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.35,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.4,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.45,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.5,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.55,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.6,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.65,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.7,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.75,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.8,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.85,
+          "frac_routed": 0.9880952380952381,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.9,
+          "frac_routed": 0.9285714285714286,
+          "hallucination_recall": 0.8888888888888888
+        },
+        {
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        {
+          "threshold": 1.0,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        }
+      ]
+    },
+    "truthfulqa": {
+      "n": 498,
+      "positives": 398,
+      "negatives": 100,
+      "degraded": 0,
+      "gate": {
+        "accuracy": 0.6526104417670683,
+        "precision": 0.7984084880636605,
+        "recall": 0.7562814070351759,
+        "f1": 0.7767741935483872,
+        "tp": 301,
+        "fp": 76,
+        "tn": 24,
+        "fn": 97
+      },
+      "threshold@0.50": {
+        "accuracy": 0.6244979919678715,
+        "precision": 0.7971830985915493,
+        "recall": 0.7110552763819096,
+        "f1": 0.751660026560425,
+        "tp": 283,
+        "fp": 72,
+        "tn": 28,
+        "fn": 115
+      },
+      "score_metrics": {
+        "scored_n": 498,
+        "auroc": 0.4819472361809045,
+        "auprc": 0.7814556413052469,
+        "brier": 0.2960478718591767,
+        "ece": 0.2634295823293172
+      },
+      "latency": {
+        "n": 498,
+        "mean_ms": 41.96856224899598,
+        "p50_ms": 41.027,
+        "p95_ms": 49.356,
+        "max_ms": 52.775
+      },
+      "routing_budgets": {
+        "<= 30%": {
+          "budget": 0.3,
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        "<= 50%": {
+          "budget": 0.5,
+          "threshold": 0.9,
+          "frac_routed": 0.4718875502008032,
+          "hallucination_recall": 0.46733668341708545
+        },
+        "<= 70%": {
+          "budget": 0.7,
+          "threshold": 0.55,
+          "frac_routed": 0.6967871485943775,
+          "hallucination_recall": 0.7010050251256281
+        }
+      },
+      "routing_curve": [
+        {
+          "threshold": 0.0,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.05,
+          "frac_routed": 1.0,
+          "hallucination_recall": 1.0
+        },
+        {
+          "threshold": 0.1,
+          "frac_routed": 0.8433734939759037,
+          "hallucination_recall": 0.8417085427135679
+        },
+        {
+          "threshold": 0.15,
+          "frac_routed": 0.8012048192771084,
+          "hallucination_recall": 0.8015075376884422
+        },
+        {
+          "threshold": 0.2,
+          "frac_routed": 0.7771084337349398,
+          "hallucination_recall": 0.7788944723618091
+        },
+        {
+          "threshold": 0.25,
+          "frac_routed": 0.7630522088353414,
+          "hallucination_recall": 0.7638190954773869
+        },
+        {
+          "threshold": 0.3,
+          "frac_routed": 0.7570281124497992,
+          "hallucination_recall": 0.7562814070351759
+        },
+        {
+          "threshold": 0.35,
+          "frac_routed": 0.7389558232931727,
+          "hallucination_recall": 0.7412060301507538
+        },
+        {
+          "threshold": 0.4,
+          "frac_routed": 0.7289156626506024,
+          "hallucination_recall": 0.7286432160804021
+        },
+        {
+          "threshold": 0.45,
+          "frac_routed": 0.7208835341365462,
+          "hallucination_recall": 0.7185929648241206
+        },
+        {
+          "threshold": 0.5,
+          "frac_routed": 0.7128514056224899,
+          "hallucination_recall": 0.7110552763819096
+        },
+        {
+          "threshold": 0.55,
+          "frac_routed": 0.6967871485943775,
+          "hallucination_recall": 0.7010050251256281
+        },
+        {
+          "threshold": 0.6,
+          "frac_routed": 0.6927710843373494,
+          "hallucination_recall": 0.6959798994974874
+        },
+        {
+          "threshold": 0.65,
+          "frac_routed": 0.6767068273092369,
+          "hallucination_recall": 0.678391959798995
+        },
+        {
+          "threshold": 0.7,
+          "frac_routed": 0.6546184738955824,
+          "hallucination_recall": 0.6582914572864321
+        },
+        {
+          "threshold": 0.75,
+          "frac_routed": 0.642570281124498,
+          "hallucination_recall": 0.6457286432160804
+        },
+        {
+          "threshold": 0.8,
+          "frac_routed": 0.6204819277108434,
+          "hallucination_recall": 0.6231155778894473
+        },
+        {
+          "threshold": 0.85,
+          "frac_routed": 0.5843373493975904,
+          "hallucination_recall": 0.585427135678392
+        },
+        {
+          "threshold": 0.9,
+          "frac_routed": 0.4718875502008032,
+          "hallucination_recall": 0.46733668341708545
+        },
+        {
+          "threshold": 0.95,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        },
+        {
+          "threshold": 1.0,
+          "frac_routed": 0.0,
+          "hallucination_recall": 0.0
+        }
+      ]
+    }
+  },
+  "combined": {
+    "n": 769,
+    "positives": 512,
+    "negatives": 257,
+    "degraded": 0,
+    "gate": {
+      "accuracy": 0.6814044213263979,
+      "precision": 0.738819320214669,
+      "recall": 0.806640625,
+      "f1": 0.7712418300653595,
+      "tp": 413,
+      "fp": 146,
+      "tn": 111,
+      "fn": 99
+    },
+    "threshold@0.50": {
+      "accuracy": 0.6644993498049415,
+      "precision": 0.7369402985074627,
+      "recall": 0.771484375,
+      "f1": 0.7538167938931298,
+      "tp": 395,
+      "fp": 141,
+      "tn": 116,
+      "fn": 117
+    },
+    "score_metrics": {
+      "scored_n": 769,
+      "auroc": 0.6431063047178989,
+      "auprc": 0.7763518209967554,
+      "brier": 0.271810725985407,
+      "ece": 0.23967385955786735
+    },
+    "latency": {
+      "n": 769,
+      "mean_ms": 49.16621976592978,
+      "p50_ms": 43.281,
+      "p95_ms": 104.7921999999999,
+      "max_ms": 203.458
+    },
+    "routing_budgets": {
+      "<= 30%": {
+        "budget": 0.3,
+        "threshold": 0.95,
+        "frac_routed": 0.0,
+        "hallucination_recall": 0.0
+      },
+      "<= 50%": {
+        "budget": 0.5,
+        "threshold": 0.95,
+        "frac_routed": 0.0,
+        "hallucination_recall": 0.0
+      },
+      "<= 70%": {
+        "budget": 0.7,
+        "threshold": 0.5,
+        "frac_routed": 0.6970091027308193,
+        "hallucination_recall": 0.771484375
+      }
+    },
+    "routing_curve": [
+      {
+        "threshold": 0.0,
+        "frac_routed": 1.0,
+        "hallucination_recall": 1.0
+      },
+      {
+        "threshold": 0.05,
+        "frac_routed": 0.9609882964889467,
+        "hallucination_recall": 1.0
+      },
+      {
+        "threshold": 0.1,
+        "frac_routed": 0.7906371911573472,
+        "hallucination_recall": 0.873046875
+      },
+      {
+        "threshold": 0.15,
+        "frac_routed": 0.7568270481144344,
+        "hallucination_recall": 0.841796875
+      },
+      {
+        "threshold": 0.2,
+        "frac_routed": 0.7399219765929779,
+        "hallucination_recall": 0.82421875
+      },
+      {
+        "threshold": 0.25,
+        "frac_routed": 0.7308192457737321,
+        "hallucination_recall": 0.8125
+      },
+      {
+        "threshold": 0.3,
+        "frac_routed": 0.7269180754226268,
+        "hallucination_recall": 0.806640625
+      },
+      {
+        "threshold": 0.35,
+        "frac_routed": 0.7152145643693107,
+        "hallucination_recall": 0.794921875
+      },
+      {
+        "threshold": 0.4,
+        "frac_routed": 0.7087126137841352,
+        "hallucination_recall": 0.78515625
+      },
+      {
+        "threshold": 0.45,
+        "frac_routed": 0.7022106631989596,
+        "hallucination_recall": 0.77734375
+      },
+      {
+        "threshold": 0.5,
+        "frac_routed": 0.6970091027308193,
+        "hallucination_recall": 0.771484375
+      },
+      {
+        "threshold": 0.55,
+        "frac_routed": 0.6866059817945384,
+        "hallucination_recall": 0.763671875
+      },
+      {
+        "threshold": 0.6,
+        "frac_routed": 0.6840052015604682,
+        "hallucination_recall": 0.759765625
+      },
+      {
+        "threshold": 0.65,
+        "frac_routed": 0.6736020806241872,
+        "hallucination_recall": 0.74609375
+      },
+      {
+        "threshold": 0.7,
+        "frac_routed": 0.659297789336801,
+        "hallucination_recall": 0.73046875
+      },
+      {
+        "threshold": 0.75,
+        "frac_routed": 0.6514954486345904,
+        "hallucination_recall": 0.720703125
+      },
+      {
+        "threshold": 0.8,
+        "frac_routed": 0.6371911573472041,
+        "hallucination_recall": 0.703125
+      },
+      {
+        "threshold": 0.85,
+        "frac_routed": 0.6124837451235371,
+        "hallucination_recall": 0.673828125
+      },
+      {
+        "threshold": 0.9,
+        "frac_routed": 0.5331599479843954,
+        "hallucination_recall": 0.578125
+      },
+      {
+        "threshold": 0.95,
+        "frac_routed": 0.0,
+        "hallucination_recall": 0.0
+      },
+      {
+        "threshold": 1.0,
+        "frac_routed": 0.0,
+        "hallucination_recall": 0.0
+      }
+    ]
+  },
+  "macro_avg": {
+    "gate_f1": 0.6995958449891431,
+    "gate_recall": 0.9118160245672807
+  },
+  "meta": {
+    "stage": "stage2_encoder",
+    "cold_start_ms": 3544.525
+  }
+}
